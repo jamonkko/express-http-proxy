@@ -9,8 +9,8 @@ function decorateUserResHeaders(container) {
     return Promise.resolve(container);
   }
 
-  const clearAllHeaders = (res) => {
-    for (const header in res._headers) {
+  function clearAllHeaders(res) {
+    for (var header in res._headers) {
       res.removeHeader(header)
     }
   }
